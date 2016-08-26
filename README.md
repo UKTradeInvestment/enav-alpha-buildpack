@@ -1,7 +1,7 @@
-# enav-alpha-buildpack
-The heroku buildpack for the enav-alpha application
+# navigator-buildpack
+The heroku buildpack for the navigator application
 
-enav-alpha buildpack to run the necessary installation of the enav-alpha application the heroku infrastructure.  
+navigator buildpack to run the necessary installation of the navigator application the heroku infrastructure.  
 
 ## Setup
 
