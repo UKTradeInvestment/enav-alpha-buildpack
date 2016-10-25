@@ -16,4 +16,3 @@ npm run build
 
 gulp
 
-python manage.py collectstatic --no-input
