@@ -13,3 +13,7 @@ echo "-----> Installing node dependencies"
 npm install
 echo "-----> Building static assets"
 npm run build
+
+gulp
+
+python manage.py collectstatic --no-input
