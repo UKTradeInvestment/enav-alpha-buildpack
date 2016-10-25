@@ -9,6 +9,10 @@ ENV_DIR=${3:-}
 
 # Build the css stylesheets on Heroku
 cd $BUILD_DIR
+
+echo "-----> Installing node dependencies"		
+npm install
+ 
 echo "-----> Building static assets"
 npm run build
 
