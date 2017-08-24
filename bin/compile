@@ -7,6 +7,12 @@ BUILD_DIR=${1:-}
 CACHE_DIR=${2:-}
 ENV_DIR=${3:-}
 
+if [ -f $BUILD_DIR/scripts/requirements.txt ] && [ -f $BUILD_DIR/app/manage.py ]
+then
+	# new dockerised app, move the requirements so heroku can find them
+	cp $BUILD_DIR/scripts/requirements.txt $BUILD_DIR/requirements.txt
+fi
+
 # Build the css stylesheets on Heroku
 cd $BUILD_DIR
 
@@ -17,4 +23,3 @@ echo "-----> Building static assets"
 npm run build
 
 gulp
-

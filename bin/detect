@@ -3,8 +3,13 @@
 BUILD_DIR=$1
 
 # exit early if app is not Django
-if [ ! -f $BUILD_DIR/requirements.txt ] && [ ! -f $BUILD_DIR/manage.py ]; then
-    exit 1
+if [ ! -f $BUILD_DIR/requirements.txt ] && [ ! -f $BUILD_DIR/manage.py ]
+then
+    # check if the reqs and manage.py are in the new dirs in the dockerised app
+    if [ ! -f $BUILD_DIR/scripts/requirements.txt ] && [ ! -f $BUILD_DIR/app/manage.py ]
+    then
+        exit 1
+    fi
 fi
 
 echo "Boom"
